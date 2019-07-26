@@ -33,7 +33,7 @@ class Home extends React.Component {
             <div id ="a" class="row">
 
                 {
-                    (this.state.profil.length > 0) ? (this.state.profil.map((obj) => {
+                   (this.state.profil.length > 0) ? (this.state.profil.filter((params) => params.visibilite).map((obj) => {
                         return (
                             <div class="col-md-4 carde">
                                 <div class="card" onClick={() => {localStorage.setItem('ti',obj._id)
